@@ -52,7 +52,8 @@ export class MarksComponent implements OnInit {
       () => {
         //this.getAllMarks();
         // best practice getAll excepte the id of the item deleted
-        this.marksFilter = this.marks = this.marks.filter(mark => mark.id != markToDelete.id)
+        this.marksFilter = this.marks = this.marks.filter(mark => mark.id != markToDelete.id);
+        //alert("student deleted successfully");
       }
     );
   }
@@ -64,14 +65,20 @@ export class MarksComponent implements OnInit {
         this.vShowFormAdd = !this.vShowFormAdd;
         this.markService.addData(this.objMark).subscribe(
           //spread operator => best practice
-          (mark) => {this.marksFilter = this.marks = [mark, ...this.marks]}
+          (mark) => {
+            this.marksFilter = this.marks = [mark, ...this.marks]
+            alert("student updated successfully");
+          }
          //() => this.getAllMarks()
         );
       }
       else if(this.vShowFormUpdat){
         this.vShowFormUpdat = false;
         this.markService.updateData(this.markIdToUpdate,this.objMark, ).subscribe(
-          () => this.getAllMarks()
+          () => {
+            this.getAllMarks()
+            alert("student updated successfully");
+          }
         );
       }
     }
