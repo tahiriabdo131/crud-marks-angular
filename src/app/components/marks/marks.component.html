@@ -1,0 +1,68 @@
+<br><br>
+
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div>
+            <h3>List Marks of students</h3>
+            <br>
+            <div>
+                <a type="button" class="btn btn-success" (click)="showFormAdd()" style="color:white">
+                    <i class="fa fa-plus">New Student</i>
+                </a>
+            </div>
+        </div>
+        <div *ngIf="vShowFormAdd || vShowFormUpdat">
+            <form (ngSubmit)="onSubmit(f)"  #f="ngForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="type the full name here.." class="form-control" name="nom" [(ngModel)]="objMark.name" required/>
+                    <label>Mark</label>
+                    <input type="number" min="0" max="20" placeholder="type the mark here.." class="form-control" name="note" [(ngModel)]="objMark.mark" required/>
+                    <!-- <span>{{objMark | json}}</span> -->
+                </div>
+                <button type="submit" class="btn btn-success btn-block" *ngIf="vShowFormAdd" [disabled]=(f.invalid)>
+                    <i class="fa fa-send"><span style="color: white;">Add Mark</span></i>
+                </button>
+                <button type="submit" class="btn btn-warning btn-block"  *ngIf="vShowFormUpdat" [disabled]=(f.invalid)>
+                    <i class="fa fa-refresh" style="color:white"><span style="color:white">Update Mark</span></i>
+                </button>
+            </form>
+        </div>
+
+        <br>
+        <div class="form-group input-icons">
+            <!-- <i class="fa fa-search icon"></i> --> <!-- (keyup)="searchName()"
+                <form (ngSubmit)="onSubmit2(f2)"  #f2="ngForm">
+            <button type="submit" (click)="btnClick()">click</button>
+                </form>
+            -->
+            <input (keyup)="searchName()" [(ngModel)]="searchText" type="text" placeholder="Search.." class="form-control input-field" name="search"/>
+        </div>
+        <table  class="table table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Full Name</th>
+                    <th>Mark</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mark of marksFilter; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{mark.name}}</td>
+                    <td>{{mark.mark}}/20</td>
+                    <td>
+                        <a type="button" class="btn btn-outline-danger btn-sm" (click)="onDeleteMark(mark)" style= "margin: 0 5px;">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                        <a type="button" class="btn btn-outline-info btn-sm" (click)="showFormUpdate(mark)">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
