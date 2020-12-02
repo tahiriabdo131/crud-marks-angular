@@ -1,0 +1,18 @@
+1) install nodejs
+
+2) install Cli Angular
+
+3) open the path of project on cmd
+
+4) print this commands in your cmd
+- npm install
+- json-server --watch db.json --port 4000
+
+5) open another window in the path of project, and run the project:
+ - ng serve
+
+6) go to the navigator and open:
+- "http://localhost:4200"
+
+7) it will work.
+
