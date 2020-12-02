@@ -27,6 +27,9 @@ export class MarksComponent implements OnInit {
     mark: 0
   }
 
+  //id of mark that we want to update
+  markIdToUpdate: number;
+
   constructor(private markService: MarkService,private http: HttpClient) { }
 
   ngOnInit(){
@@ -67,7 +70,7 @@ export class MarksComponent implements OnInit {
       }
       else if(this.vShowFormUpdat){
         this.vShowFormUpdat = false;
-        this.markService.updateData(this.objMark).subscribe(
+        this.markService.updateData(this.markIdToUpdate,this.objMark, ).subscribe(
           () => this.getAllMarks()
         );
       }
@@ -94,6 +97,7 @@ export class MarksComponent implements OnInit {
     this.searchText = '';
     this.objMark.name = mark.name;
     this.objMark.mark = mark.mark;
+    this.markIdToUpdate = mark.id;
   }
 
  //search in real time

@@ -18,8 +18,8 @@ export class MarkService{
         return this.http.post<Mark>(`${this.apiUrl}`,objMark)
     }
 
-    updateData(mark){
-        return this.http.put<Mark[]>(`${this.apiUrl}/${mark.id}`,mark);
+    updateData(id,mark){
+        return this.http.put<Mark[]>(`${this.apiUrl}/${id}`,mark);
     }
 
     deleteData(id){
