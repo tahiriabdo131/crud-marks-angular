@@ -67,7 +67,7 @@ export class MarksComponent implements OnInit {
           //spread operator => best practice
           (mark) => {
             this.marksFilter = this.marks = [mark, ...this.marks]
-            alert("student updated successfully");
+            alert("student added successfully");
           }
          //() => this.getAllMarks()
         );
