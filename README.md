@@ -1,27 +1,39 @@
-# Marks
+## Demo Live
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A mini To-Do-List application to manage the students and their marks :
+- Consult Marks List
+- Add Mark
+- Update Mark
+- Delete Mark
+- Search Student
 
-## Code scaffolding
+![image](https://user-images.githubusercontent.com/56969009/213930819-e5024c77-8d23-477d-8d96-8b8e3e8ea773.png)
+https://www.youtube.com/watch?v=3rm3Laz43sg&ab_channel=AbdelaliTahiri
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+HTML, CSS, Bootstrap, JS, TS, Angular, API
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup
 
-## Running end-to-end tests
+- install Node.js : https://nodejs.org/en/download/
+- install Angular cli : npm install -g @angular/cli
+- Install fake API json-server : npm install -g json-server
+- Install all packages : npm install
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Run
 
-## Further help
+- Fake API 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+json-server --watch beneficiaries.json --port 5000
+
+- Application
+
+ng server -o
+
+
