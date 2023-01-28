@@ -33,7 +33,7 @@ HTML, CSS, Bootstrap, JS, TS, Angular, API
 
 - install Node.js (if it doesn't exist) :
 ```sh
- https://nodejs.org/en/download/ (https://nodejs.org/en/download/)
+ https://nodejs.org/en/download/
 ```
 
 - Open the project in Visual Studio Code : 
@@ -61,5 +61,5 @@ ng serve -o
 
 
 ```sh
-Fake API : https://fake-api-ip4o.onrender.com/api/students (https://fake-api-ip4o.onrender.com/api/students )
+Fake API : https://fake-api-ip4o.onrender.com/api/students
 ```
