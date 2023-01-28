@@ -5,7 +5,7 @@ import { Mark } from '../models/mark';
 @Injectable()
 export class MarkService{
 
-    apiUrl = "http://localhost:4000/marks";
+  apiUrl = "https://fake-api-ip4o.onrender.com/api/students";
     
     constructor(private http: HttpClient){
     }
