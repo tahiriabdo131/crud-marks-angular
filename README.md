@@ -1,11 +1,12 @@
 ## Live Demo
 
-https://tahiriabdo131.github.io/CRUD-Marks-Angular/
+[To-do-list of students-marks](https://tahiriabdo131.github.io/crud-marks-angular/)
 
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/56969009/213930819-e5024c77-8d23-477d-8d96-8b8e3e8ea773.png)
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/56969009/215273720-df9d8d17-57ef-48b4-829c-d49b57a9f8e4.png">
+
 
 
 ## Demo video
@@ -61,5 +62,5 @@ ng serve -o
 
 
 ```sh
-Fake API : https://fake-api-ip4o.onrender.com/api/students 
+Fake API : https://fake-api-ip4o.onrender.com/api/students
 ```
